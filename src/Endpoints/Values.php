@@ -31,7 +31,7 @@ class Values extends Endpoint
 
         $dates = array_values(array_filter($dates));
         $dates = array_map(function ($date) {
-            return DateTime::createFromFormat('d/m/Y', $date);
+            return DateTime::createFromFormat('m/d/Y', $date);
         }, $dates);
 
         $count = $crawler->filter('.TableResponsive tbody tr th')->count();
