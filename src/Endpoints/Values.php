@@ -55,7 +55,7 @@ class Values extends Endpoint
         $type = static::TYPE_MAPPING[$type];
 
         $values = $crawler->filter('.TableResponsive tbody tr')
-            ->eq(0)
+            ->eq($id)
             ->filter('td')
             ->each(function (Crawler $node, $i) {
                 return $node->text();
